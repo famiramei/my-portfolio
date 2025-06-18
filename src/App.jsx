@@ -25,12 +25,12 @@ function App() {
             <img src="/profile.jpg" alt="Profile" className="profile-pic" />
             <div className="profile-info">
               <h3>Famira Mei Catalan</h3>
-              <p>Computer Science Student</p>
+              <p>Software Developer</p>
             </div>
           </div>
           <p className="about-text">
-            Hi! I'm Famira, a BS Computer Science student from the University of Mindanao.
-            Lorem Ipsum 
+            With a love for building functional and user-friendly software,
+            I enjoy learning technologies and turning ideas into real-world applications.
           </p>
         </div>
 
@@ -204,7 +204,7 @@ function App() {
           <h3><b>My Resume</b></h3>
           <p>View or download my resume below:</p>
           <a 
-            href="/resume.pdf" 
+            href="/CatalanFM_Resume.pdf" 
             target="_blank" 
             rel="noopener noreferrer"
             className="resume-button"
