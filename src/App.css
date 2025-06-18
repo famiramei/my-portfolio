@@ -1,0 +1,297 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+  max-width: 1200px;
+  margin: 0 auto; /* center horizontally */
+  padding: 1rem;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1rem;
+  gap: 1rem;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.column {
+  flex: 1;
+  min-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column {
+    width: 100%;
+    max-width: 100%;
+    overflow: visible; /* disable scroll */
+  }
+}
+
+@media (max-width: 768px) {
+  .column {
+    overflow: visible;
+  }
+}
+
+.column {
+  overflow-y: auto;
+}
+
+.about {
+  flex: 1.5;
+  max-width: 350px;
+}
+
+.skills {
+  flex: 1;
+  min-width: 300px;
+}
+
+.projects {
+  flex: 2;
+  min-width: 400px;
+}
+
+.column:last-child {
+  border-right: none;
+}
+
+/* All columns now look like one seamless area */
+.about, .skills, .projects {
+  background-color: transparent;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* === About Card === */
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.profile-pic {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 1rem;
+  border: 2px solid #ccc;
+}
+
+.profile-info h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.profile-info h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1.2; /* Add this to tighten spacing */
+}
+
+.profile-info p {
+  margin-top: 0.25rem; /* Reduce spacing */
+  margin-bottom: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.about-text {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* === Contact Card === */
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.card h4 {
+  font-size: 1rem;
+  margin: 0.75rem 0 0.25rem;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  margin-bottom: 0.75rem;
+}
+
+.contact-list a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+/* Tech Grid */
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f0f0f0;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.tech-item img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin: 0;
+}
+
+/* Cert Grid */
+.cert-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cert-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cert-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.cert-image {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+}
+
+.cert-details {
+  padding: 0.75rem;
+}
+
+.cert-details h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.cert-details p {
+  margin: 0.25rem 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.cert-date {
+  font-style: italic;
+  font-size: 0.75rem;
+  color: #888;
+}
+
+/* === Projects === */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive layout */
+  gap: 1rem;
+}
+
+.project-card {
+  background-color: #fff;
+  padding: 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.project-image {
+  width: 100%;
+  height: 123px;
+  object-fit: cover;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.project-details h4 {
+  font-size: 0.95rem; /* was 1rem */
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+.project-details p {
+  font-size: 0.8rem; /* was 0.85rem */
+  margin: 0;
+  color: #555;
+}
+
+.resume-button {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background-color: #e4adc0;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.resume-button:hover {
+  background-color: #d296af;
+}
+
